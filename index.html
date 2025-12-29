@@ -168,6 +168,17 @@
             font-size: 0.8em;
         }
 
+        /* --- NUEVO ESTILO PARA LA TEORÍA --- */
+        .teoria-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid #ff0055;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 0 10px 10px 0;
+        }
+        .teoria-box h4 { color: #ff0055; margin-bottom: 5px; text-transform: uppercase; font-size: 0.9em; }
+        .teoria-box p { font-size: 0.95em; color: #ddd; line-height: 1.5; }
+
         .lista-trabajos {
             list-style: none;
             padding: 0;
@@ -180,6 +191,9 @@
             border-left: 4px solid #667eea;
             border-radius: 8px;
             transition: all 0.3s ease;
+            display: flex; /* Para alinear texto y tag */
+            justify-content: space-between;
+            align-items: center;
         }
 
         .lista-trabajos li:hover {
@@ -193,20 +207,28 @@
             text-decoration: none;
             font-size: 1.1em;
             transition: color 0.3s ease;
+            flex-grow: 1;
         }
 
         .lista-trabajos a:hover {
             color: #64ffda;
         }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
+        /* --- ETIQUETA PEQUEÑA --- */
+        .tag-code {
+            font-size: 0.8em; 
+            background: #2d2d2d; 
+            padding: 2px 8px;
+            border-radius: 4px; 
+            color: #aaa; 
+            margin-left: 10px;
+        }
 
-            .tema-titulo {
-                font-size: 1.5em;
-            }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .tema-titulo { font-size: 1.5em; }
+            .lista-trabajos li { flex-direction: column; align-items: flex-start; }
+            .tag-code { margin-top: 5px; margin-left: 0; }
         }
     </style>
 </head>
@@ -219,6 +241,7 @@
             <h1>LENGUAJE DE PROGRAMACIÓN II</h1>
             <p class="info-principal">👨‍🏫 <strong>Docente:</strong> COYLA IDME LEONE</p>
             <p class="info-principal">👨‍🎓 <strong>Estudiante:</strong> JHON GILMER MAMANI APAZA</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7">Universidad Nacional del Altiplano - Puno</p>
         </header>
 
         <div class="perfil-section">
@@ -234,57 +257,82 @@
         </div>
 
         <div class="temas-section">
+            
             <div class="tema-container">
                 <h3 class="tema-titulo">Estructura Selectiva</h3>
+                <div class="teoria-box">
+                    <h4>📘 Fundamento Teórico</h4>
+                    <p>Las estructuras selectivas permiten tomar decisiones en el código. Utilizamos condicionales como <code>if</code>, <code>elif</code> y <code>else</code> para ejecutar bloques de código específicos según se cumpla o no una condición lógica.</p>
+                </div>
                 <ol class="lista-trabajos">
-                    <li><a href="https://github.com/tuusuario/proyecto1" target="_blank">1️⃣ Trabajo 1 - Estructura Selectiva</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto2" target="_blank">2️⃣ Trabajo 2 - Estructura Selectiva</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto3" target="_blank">3️⃣ Trabajo 3 - Estructura Selectiva</a></li>
+                    <li><a href="SIGNO ZODIACAL.py" target="_blank">1️⃣ SIGNO ZODIACAL.py</a> <span class="tag-code">if/elif</span></li>
+                    <li><a href="calculadora estadistica.py" target="_blank">2️⃣ calculadora estadistica.py</a> <span class="tag-code">Condicional</span></li>
+                    <li><a href="numeros.py" target="_blank">3️⃣ numeros.py</a> <span class="tag-code">Par/Impar</span></li>
                 </ol>
             </div>
 
             <div class="tema-container">
                 <h3 class="tema-titulo">Estructura Repetitiva</h3>
+                <div class="teoria-box">
+                    <h4>📘 Fundamento Teórico</h4>
+                    <p>Las estructuras repetitivas (bucles) permiten ejecutar un conjunto de instrucciones varias veces. Python utiliza principalmente el bucle <code>for</code> para iterar sobre secuencias y el bucle <code>while</code> para repetir mientras una condición sea verdadera.</p>
+                </div>
                 <ol class="lista-trabajos">
-                    <li><a href="https://github.com/tuusuario/proyecto4" target="_blank">1️⃣ Trabajo 1 - Estructura Repetitiva</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto5" target="_blank">2️⃣ Trabajo 2 - Estructura Repetitiva</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto6" target="_blank">3️⃣ Trabajo 3 - Estructura Repetitiva</a></li>
+                    <li><a href="fibonacci.py" target="_blank">1️⃣ fibonacci.py</a> <span class="tag-code">While Loop</span></li>
+                    <li><a href="suma de los numeros naturales.py" target="_blank">2️⃣ suma de los numeros naturales.py</a> <span class="tag-code">Algoritmo</span></li>
+                    <li><a href="metodo new rap.txt" target="_blank">3️⃣ metodo new rap.txt</a> <span class="tag-code">Iteración Numérica</span></li>
                 </ol>
             </div>
 
             <div class="tema-container">
                 <h3 class="tema-titulo">Encapsulamiento</h3>
+                <div class="teoria-box">
+                    <h4>📘 Fundamento Teórico</h4>
+                    <p>Es uno de los pilares de la POO. Consiste en ocultar los detalles internos de un objeto y proteger su estado. En Python, se simula mediante convenciones o propiedades para controlar el acceso a los atributos.</p>
+                </div>
                 <ol class="lista-trabajos">
-                    <li><a href="https://github.com/tuusuario/proyecto7" target="_blank">1️⃣ Trabajo 1 - Encapsulamiento</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto8" target="_blank">2️⃣ Trabajo 2 - Encapsulamiento</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto9" target="_blank">3️⃣ Trabajo 3 - Encapsulamiento</a></li>
+                    <li><a href="cuenta bancaria.py" target="_blank">1️⃣ cuenta bancaria.py</a> <span class="tag-code">Estado Protegido</span></li>
+                    <li><a href="calorias comida.py" target="_blank">2️⃣ calorias comida.py</a> <span class="tag-code">Atributos</span></li>
+                    <li><a href="persona , hola.py" target="_blank">3️⃣ persona , hola.py</a> <span class="tag-code">Clase Básica</span></li>
                 </ol>
             </div>
 
             <div class="tema-container">
                 <h3 class="tema-titulo">Métodos y Sobrecargas</h3>
+                <div class="teoria-box">
+                    <h4>📘 Fundamento Teórico</h4>
+                    <p>Los métodos definen el comportamiento de los objetos. La sobrecarga permite que un mismo nombre de método tenga diferentes comportamientos según los parámetros recibidos (simulado en Python con argumentos por defecto).</p>
+                </div>
                 <ol class="lista-trabajos">
-                    <li><a href="https://github.com/tuusuario/proyecto10" target="_blank">1️⃣ Trabajo 1 - Métodos y Sobrecargas</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto11" target="_blank">2️⃣ Trabajo 2 - Métodos y Sobrecargas</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto12" target="_blank">3️⃣ Trabajo 3 - Métodos y Sobrecargas</a></li>
+                    <li><a href="area del rectangulo 3.- retorno de metodo.py" target="_blank">1️⃣ area del rectangulo (Retorno)</a> <span class="tag-code">Return</span></li>
+                    <li><a href="4 sobrecarga de metodo operacion.py" target="_blank">2️⃣ 4 sobrecarga de metodo operacion.py</a> <span class="tag-code">Polimorfismo</span></li>
+                    <li><a href="parametro en metodo.py" target="_blank">3️⃣ parametro en metodo.py</a> <span class="tag-code">Argumentos</span></li>
                 </ol>
             </div>
 
             <div class="tema-container">
                 <h3 class="tema-titulo">Constructores y Destructores</h3>
+                <div class="teoria-box">
+                    <h4>📘 Fundamento Teórico</h4>
+                    <p>El constructor (<code>__init__</code>) inicializa el objeto al crearse. El destructor (<code>__del__</code>) se ejecuta cuando el objeto se elimina, útil para liberar memoria y cerrar conexiones.</p>
+                </div>
                 <ol class="lista-trabajos">
-                    <li><a href="https://github.com/tuusuario/proyecto13" target="_blank">1️⃣ Trabajo 1 - Constructores y Destructores</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto14" target="_blank">2️⃣ Trabajo 2 - Constructores y Destructores</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto15" target="_blank">3️⃣ Trabajo 3 - Constructores y Destructores</a></li>
+                    <li><a href="constructor ,.py" target="_blank">1️⃣ constructor ,.py</a> <span class="tag-code">__init__</span></li>
+                    <li><a href="circulo , desctructor 222.py" target="_blank">2️⃣ circulo , desctructor 222.py</a> <span class="tag-code">__del__</span></li>
+                    <li><a href="gc . estudiantes 22.py" target="_blank">3️⃣ gc . estudiantes 22.py</a> <span class="tag-code">Garbage Collector</span></li>
                 </ol>
             </div>
 
             <div class="tema-container">
                 <h3 class="tema-titulo">Relaciones entre Clases</h3>
+                <div class="teoria-box">
+                    <h4>📘 Fundamento Teórico</h4>
+                    <p>Define cómo interactúan los objetos. La <strong>Composición</strong> es una relación fuerte (el "todo" y las "partes" viven y mueren juntos), mientras que la <strong>Agregación</strong> es más débil (las partes pueden existir sin el todo).</p>
+                </div>
                 <ol class="lista-trabajos">
-                    <li><a href="https://github.com/tuusuario/proyecto16" target="_blank">1️⃣ Trabajo 1 - Relaciones entre Clases</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto17" target="_blank">2️⃣ Trabajo 2 - Relaciones entre Clases</a></li>
-                    <li><a href="https://github.com/tuusuario/proyecto18" target="_blank">3️⃣ Trabajo 3 - Relaciones entre Clases</a></li>
+                    <li><a href="3 composicion , auto,arranca.py" target="_blank">1️⃣ Composición (Auto/Motor)</a> <span class="tag-code">Fuerte</span></li>
+                    <li><a href="agregacion ejemplo doble.py" target="_blank">2️⃣ Agregación (Uni/Depto)</a> <span class="tag-code">Débil</span></li>
+                    <li><a href="dos iniciadores --- curso,profesor.py" target="_blank">3️⃣ Asociación (Curso/Profe)</a> <span class="tag-code">Asociación</span></li>
                 </ol>
             </div>
         </div>
